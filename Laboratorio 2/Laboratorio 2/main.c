@@ -18,7 +18,7 @@ void initUART();
 void wChar(char character);
 void wStr(char *strng);
 
-uint8_t contador_ADC;
+uint8_t contador_ADC = 0;
 uint8_t contador_USART;
 uint8_t ADCUno;
 uint8_t ADCDos;

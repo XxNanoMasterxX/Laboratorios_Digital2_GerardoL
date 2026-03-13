@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>lab3</AssemblyName>
-    <Name>lab3</Name>
-    <RootNamespace>lab3</RootNamespace>
+    <AssemblyName>slave2</AssemblyName>
+    <Name>slave2</Name>
+    <RootNamespace>slave2</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
@@ -120,18 +120,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="I2C_Libraries\I2C.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2C_Libraries\I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI\SPI.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI\SPI.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SPI" />
+    <Folder Include="I2C_Libraries" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
